@@ -79,5 +79,5 @@ StageApp::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
 
-  config.action_mailer.default_url_options = { http://morning-spire-6953.herokuapp.com/ }
+  config.action_mailer.default_url_options = { host: 'http://morning-spire-6953.herokuapp.com/' }
 end
