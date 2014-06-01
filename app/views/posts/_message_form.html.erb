@@ -1,5 +1,5 @@
 <%= form_tag(:controller => "posts", :action => "create") do %>
-	<%= label_tag(:message, "What are you doing?") %><br />
+	<%= label_tag(:message, "What's on your mind?") %><br />
   <%= text_area_tag(:message, nil, :size => "44x6") %><br />
   <%= submit_tag("Update") %>
 <% end %>
