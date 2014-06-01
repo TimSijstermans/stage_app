@@ -1,4 +1,8 @@
-StageApp::Application.routes.draw do
+StageApp::Application.routes.draw do 
+  resources :posts
+  # connect ':controller/:action/:id'
+  # connect ':controller/:action/:id.:format'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
