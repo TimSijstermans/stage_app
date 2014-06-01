@@ -2,7 +2,7 @@ body
 {
   font-family: tahoma, sans-serif;
   font-size: 18px;
-  background-color: #4B7399;
+  background-color: #66CCFF;
   width: 100%;
   color: #ffffff;
   margin: 0;
@@ -21,5 +21,9 @@ body
   padding: 5px 20px 5px 20px;
   background-color: #ffffff;
   margin: 20px 0 20px 0;
+  margin-left: auto;
+  margin-right: auto;
   color: #000000;
+  border-radius:25px;
+  width: 50%;
 } 
