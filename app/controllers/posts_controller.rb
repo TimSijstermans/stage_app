@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  # before_action :authenticate_user!
   def index
     @posts = Post.all(:order => "created_at DESC")
     respond_to do |format|
@@ -6,7 +7,7 @@ class PostsController < ApplicationController
     end
   end
   def create
-    @post = Post.create(:message => params[:message])
+    @post = Post.create(:message => params[:message], :user => current_user.email)
     respond_to do |format|
       if @post.save
         format.html { redirect_to posts_path }
