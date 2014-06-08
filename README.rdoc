@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The minimum viable product + requirements is the minimum required to satisfy this excercise.
 
-Things you may want to cover:
+Minimum viable product:
+  A multi user rails application with postgres as the database deployed to heroku.
 
-* Ruby version
+    By multi user I mean:
+      People can sign up, with an email and password for example, and then have access to the app, and any data they create in it.
 
-* System dependencies
+    In terms of setup, and getting it on heroku, this tutorial is very helpful: http://www.railstutorial.org/book
 
-* Configuration
+Requirements:
+  Use the twitter bootstrap gem to help with your layout and give you a headstart on the CSS.
+  Use HAML for your view code.
+  Use Postgres for your database.  
+  Commit your code to a github repo.
+  Deploy it to Heroku.
+  Must be a multi user application.
+  Use the Devise gem to help you set up Users and authentication
+  Choose one view and polish it. The rest can be scaffold and just functional but not pretty.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
