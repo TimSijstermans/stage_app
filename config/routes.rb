@@ -1,5 +1,8 @@
 StageApp::Application.routes.draw do 
   devise_for :users
+  
+  get 'posts/faq'
+
   resources :posts
   # connect ':controller/:action/:id'
   # connect ':controller/:action/:id.:format'

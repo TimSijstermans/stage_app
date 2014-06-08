@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StageApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Tweetehr</title>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= stylesheet_link_tag 'layout' %>
   <%= csrf_meta_tags %>
+  
+	<%= nav_bar :fixed => :top, :brand => "Tweetehr", :brand_link => root_path do %>
+		<%= menu_group do %>
+			<%= menu_divider %>
+			<%= menu_item "Home", root_path %>
+			<%= menu_item "Faq", "/posts/faq" %>
+			<%= menu_divider %>
+		<% end %>
 
+		<%= menu_group :pull => :right do %>
+			<% if user_signed_in? %>
+				<%= menu_item 'Logout', destroy_user_session_path, :method => :delete %>
+			<% else %>
+				<%= menu_item 'Login', new_user_session_path %>
+			<% end %>
+		<% end %>
+	<% end %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>

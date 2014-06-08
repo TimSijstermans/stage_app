@@ -6,6 +6,7 @@ class PostsController < ApplicationController
       format.html
     end
   end
+
   def create
     @post = Post.create(:message => params[:message], :user => current_user.email)
     respond_to do |format|
