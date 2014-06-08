@@ -1,0 +1,8 @@
+- model_class = Post
+.page-header
+  %h2= t '.title', :default => model_class.model_name.human.pluralize.titleize
+- if user_signed_in?
+  = render :partial => "message_form"
+#posts
+  = render :partial => @posts
+

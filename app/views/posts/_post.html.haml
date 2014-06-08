@@ -1,0 +1,5 @@
+= div_for post do
+  %p
+    %b
+      Posted by #{post.user.split('@').first} #{time_ago_in_words(post.created_at)} ago
+  %p= post.message
